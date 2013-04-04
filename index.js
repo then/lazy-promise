@@ -1,3 +1,4 @@
+var Promise = require('promise')
 module.exports = LazyPromise
 function LazyPromise(fn) {
   if (!(this instanceof LazyPromise))
