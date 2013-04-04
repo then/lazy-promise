@@ -14,6 +14,16 @@ describe('a lazy promise', function() {
     }, 20)
   })
 
+  it('should call the factory when .then is called', function(cb) {
+    var factory = chai.spy()
+      , promise = new Promise(factory)
+    promise.then(function() {}, function() {})
+    setTimeout(function() {
+      expect(factory).to.have.been.called()
+      cb()
+    }, 20)
+  })
+
   it('should only call the success callback on success', function(cb) {
     var factory = chai.spy(function(resolve, reject) { resolve({}) })
       , promise = new Promise(factory)
