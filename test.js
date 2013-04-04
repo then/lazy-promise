@@ -30,6 +30,13 @@ describe('a lazy promise', function() {
     expect(ret).to.have.property('then').and.to.be.a('function')
   })
 
+  it('should call the factory asynchronously', function() {
+    var factory = chai.spy()
+      , promise = new Promise(factory)
+    promise.then(function() {}, function() {})
+    expect(factory).to.not.have.been.called()
+  })
+
   it('should only call the success callback on success', function(cb) {
     var factory = chai.spy(function(resolve, reject) { resolve({}) })
       , promise = new Promise(factory)
