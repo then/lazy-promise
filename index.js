@@ -8,6 +8,6 @@ function LazyPromise(fn) {
 
   var promise = null
   this.then = function(onResolved, onRejected) {
-    ;(promise = promise || new Promise(fn)).then(onResolved, onRejected)
+    return (promise = promise || new Promise(fn)).then(onResolved, onRejected)
   }
 }
