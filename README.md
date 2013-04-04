@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/nathan7/lazy-promise.png?branch=master)](https://travis-ci.org/nathan7/lazy-promise)
 
 # lazy-promise
 
