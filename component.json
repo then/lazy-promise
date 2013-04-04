@@ -1,0 +1,18 @@
+{
+  "name": "lazy-promise",
+  "repo": "nathan7/lazy-promise",
+  "description": "A bare-bones lazily-evaluated Promises/A+ implementation.",
+  "version": "1.0.0",
+  "keywords": [
+    "lazy",
+    "promise"
+  ],
+  "dependencies": {
+    "then/promise": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
