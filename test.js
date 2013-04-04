@@ -24,6 +24,12 @@ describe('a lazy promise', function() {
     }, 20)
   })
 
+  it('should return a promise from .then', function() {
+    var promise = new Promise(function() {})
+      , ret = promise.then(function() {}, function() {})
+    expect(ret).to.have.property('then').and.to.be.a('function')
+  })
+
   it('should only call the success callback on success', function(cb) {
     var factory = chai.spy(function(resolve, reject) { resolve({}) })
       , promise = new Promise(factory)
