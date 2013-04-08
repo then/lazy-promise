@@ -1,10 +1,16 @@
 var Promise = require('./')
+  , _Promise = require('promise')
   , chai = require('chai')
   , expect = chai.expect
 chai.use(require('chai-spies'))
 
 
 describe('a lazy promise', function() {
+  it('should inherit from normal Promise', function() {
+    var promise = new Promise(function() {})
+    expect(promise).to.be.an['instanceof'](_Promise)
+  })
+
   it('should not do anything when left unused', function(cb) {
     var factory = chai.spy()
       , promise = new Promise(factory)
