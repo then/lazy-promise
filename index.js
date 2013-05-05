@@ -1,8 +1,6 @@
 var Promise = require('promise')
   , inherit = require('inherit')
-  , nextTick = (typeof process !== 'undefined' && typeof process.nextTick === 'function')
-      ? process.nextTick
-      : require('next-tick')
+  , nextTick = require('next-tick')
 
 module.exports = LazyPromise
 inherit(LazyPromise, Promise)

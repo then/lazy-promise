@@ -15,7 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "promise": "~2.0.0",
-    "inherit": "nathan7/inherit"
+    "inherit": "nathan7/inherit",
+    "next-tick": "timoxley/next-tick"
   },
   "devDependencies": {
     "chai": "~1.5.0",

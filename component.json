@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "then/promise": "*",
-    "component/inherit": "*"
+    "component/inherit": "*",
+    "timoxley/next-tick": "*"
   },
   "development": {},
   "license": "MIT",
