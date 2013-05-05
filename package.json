@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "promise": "~2.0.0",
-    "inherit": "git://github.com/nathan7/inherit"
+    "inherit": "nathan7/inherit"
   },
   "devDependencies": {
     "chai": "~1.5.0",
