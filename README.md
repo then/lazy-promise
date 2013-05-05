@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nathan7/lazy-promise.png?branch=master)](https://travis-ci.org/nathan7/lazy-promise)
+[![Build Status](https://travis-ci.org/then/lazy-promise.png?branch=master)](https://travis-ci.org/then/lazy-promise)
 
 # lazy-promise
 
@@ -10,7 +10,7 @@
 
   or
 
-    $ component install nathan7/lazy-promise
+    $ component install then/lazy-promise
 
 ## API
 
