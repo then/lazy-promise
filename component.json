@@ -10,7 +10,7 @@
   "dependencies": {
     "then/promise": "*",
     "component/inherit": "*",
-    "timoxley/next-tick": "*"
+    "johntron/asap": "*"
   },
   "development": {},
   "license": "MIT",

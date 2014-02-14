@@ -1,6 +1,6 @@
 var Promise = require('promise')
   , inherit = require('inherit')
-  , nextTick = require('next-tick')
+  , asap = require('asap')
 
 module.exports = LazyPromise
 inherit(LazyPromise, Promise)
@@ -18,7 +18,7 @@ function LazyPromise(fn) {
 
   function createPromise() {
     promise = new Promise(function(resolve, reject) {
-      nextTick(function() {
+      asap(function() {
         fn(resolve, reject)
       })
     })
