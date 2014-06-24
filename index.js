@@ -20,7 +20,8 @@ function LazyPromise(fn) {
   function createPromise() {
     promise = new Promise(function(resolve, reject) {
       asap(function() {
-        fn(resolve, reject)
+        try { fn(resolve, reject) }
+        catch (e) { reject(e) }
       })
     })
   }
