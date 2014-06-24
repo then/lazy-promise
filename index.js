@@ -1,3 +1,4 @@
+'use strict';
 var Promise = require('promise')
   , inherit = require('inherit')
   , asap = require('asap')
