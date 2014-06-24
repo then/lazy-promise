@@ -14,7 +14,7 @@
   "author": "Nathan Zadoks",
   "license": "MIT",
   "dependencies": {
-    "promise": ">=3.2 <5",
+    "promise": ">=3.2 <6",
     "inherit": "nathan7/inherit",
     "asap": "~1.0.0"
   },
