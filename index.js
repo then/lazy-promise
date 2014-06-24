@@ -8,7 +8,7 @@ inherit(LazyPromise, Promise)
 function LazyPromise(fn) {
   if (!(this instanceof LazyPromise))
     return new LazyPromise(fn)
-  if (typeof fn !== 'function')
+  if (typeof fn != 'function')
     throw new TypeError('fn is not a function')
 
   var promise = null
