@@ -5,7 +5,7 @@ var Promise = require('promise')
 
 module.exports = LazyPromise
 inherit(LazyPromise, Promise)
-function LazyPromise(fn) {
+function LazyPromise(fn) { var self = this
   if (!(this instanceof LazyPromise))
     return new LazyPromise(fn)
   if (typeof fn != 'function')
@@ -18,11 +18,13 @@ function LazyPromise(fn) {
   }
 
   function createPromise() {
-    promise = new Promise(function(resolve, reject) {
+    Promise.call(self, function(resolve, reject) {
       asap(function() {
         try { fn(resolve, reject) }
         catch (e) { reject(e) }
       })
     })
+
+    promise = self
   }
 }
