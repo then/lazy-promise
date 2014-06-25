@@ -11,10 +11,10 @@ function LazyPromise(fn) { var self = this
   if (typeof fn != 'function')
     throw new TypeError('fn is not a function')
 
-  var promise = null
+  var created = false
   this.then = function(onResolved, onRejected) {
-    if (promise === null) createPromise()
-    return promise.then(onResolved, onRejected)
+    if (!created) createPromise()
+    return self.then(onResolved, onRejected)
   }
 
   function createPromise() {
@@ -25,6 +25,6 @@ function LazyPromise(fn) { var self = this
       })
     })
 
-    promise = self
+    created = true
   }
 }
