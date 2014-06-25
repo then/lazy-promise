@@ -5,6 +5,7 @@ var Promise = require('promise')
 
 module.exports = LazyPromise
 inherit(LazyPromise, Promise)
+LazyPromise.prototype.constructor = Promise
 function LazyPromise(fn) { var self = this
   if (!(this instanceof LazyPromise))
     return new LazyPromise(fn)
