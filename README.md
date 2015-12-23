@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/then/lazy-promise.png?branch=master)](https://travis-ci.org/then/lazy-promise)
+[![Build Status](https://img.shields.io/travis/then/lazy-promise/master.svg)](https://travis-ci.org/then/lazy-promise)
 
 # lazy-promise
 
