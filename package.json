@@ -1,6 +1,6 @@
 {
   "name": "lazy-promise",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "A bare-bones lazily-evaluated Promises/A+ implementation.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
